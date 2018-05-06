@@ -13,7 +13,7 @@ export default class Article extends React.Component {
 
         const { noteStyle, featuredTitleStyle } = styles;
         const time = moment(publishedAt || moment.now()).fromNow();
-        const defaultImg = "hhttps://wallpaper.wiki/wp-content/uploads/2017/04/wallpaper.wiki-Images-HD-Diamond-Pattern-PIC-WPB009691.jpg";
+        const defaultImg = "https://wallpaper.wiki/wp-content/uploads/2017/04/wallpaper.wiki-Images-HD-Diamond-Pattern-PIC-WPB009691.jpg";
 
         return (
             <TouchableOpacity
@@ -58,7 +58,7 @@ const styles = {
     }, 
     featuredTitleStyle: {
         marginHorizontal: 5,
-        textShadowColor: '#0000f',
+        textShadowColor: '#00000f',
         textShadowOffset: { width: 3, height: 3 },
         textShadowRadius: 3
     }
