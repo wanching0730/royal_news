@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Linking, TouchableNativeFeedback } from 'react-native';
+import { View, Linking, TouchableOpacity } from 'react-native';
 import { Text, Button, Card, Divider } from 'react-native-elements';
 import moment from 'moment';
 
@@ -9,14 +9,14 @@ export default class Article extends React.Component {
         // destructuring variable "article" passed from App.js
         const {
             title, description, publishedAt, source, urlToImage, url
-        } = this.props.articles;
+        } = this.props.article;
 
         const { noteStyle, featuredTitleStyle } = styles;
         const time = moment(publishedAt || moment.now()).fromNow();
         const defaultImg = "hhttps://wallpaper.wiki/wp-content/uploads/2017/04/wallpaper.wiki-Images-HD-Diamond-Pattern-PIC-WPB009691.jpg";
 
         return (
-            <TouchableNativeFeedback
+            <TouchableOpacity
 
                 // tell the element to use the foreground when displaying the ripple effect on the card
                 useForeground
@@ -44,7 +44,7 @@ export default class Article extends React.Component {
                         <Text style={noteStyle}>{time}</Text>
                     </View>
                 </Card>
-            </TouchableNativeFeedback>
+            </TouchableOpacity>
         );
     }
 }
